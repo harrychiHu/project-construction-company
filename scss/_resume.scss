@@ -1,0 +1,48 @@
+// resume
+
+.resume{
+  width: 50%;
+  color: $text_color;
+  
+  h2{
+    text-align: center;
+  }
+  .resume__card--row{
+    margin-bottom: 6rem;
+    .resume__card--title{
+      display: flex;
+      justify-content: space-between;
+    }
+    .resume__card--col{
+      margin-top: 3rem;
+      .resume__card{
+        display: flex;
+        background-color: $silverChalice;
+        justify-content: space-around;
+        color: $background_color;
+        padding: 2rem;
+        border-radius: .5rem;
+        margin-bottom: 3rem;
+        .resume__card--header{
+          line-height: 2rem;
+          h4{
+            @include font-size(1.5rem);
+            color: $title_color;
+          }
+          h5{
+            @include font-size(1.1rem);
+            font-weight: bold;
+          }
+        }
+        .resume__card--body{
+          width: 50%;
+          ul{
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+  }
+
+}

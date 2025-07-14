@@ -1,0 +1,140 @@
+//nav
+
+nav{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  h1{
+    @include font-size(1.5rem);
+    letter-spacing: .1rem;
+    position: relative;
+    margin-left: 1.2rem;
+    
+    a{
+      text-decoration: none;
+      color: $text_color;
+      &::before{
+        position: absolute;
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        background-color: $title_color;
+        top: .6rem;
+        left: -1.2rem;
+      }
+    }
+    .nav_tittle--highlighted{
+      @include font-size(1rem);
+      text-transform: uppercase;
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3); // 深色微透明
+    backdrop-filter: blur(2px);          // 模糊後面畫面
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  #hamburger{
+    display: block;
+    i{
+      color: $text_color;
+      @include font-size(1.5rem);
+    }
+  }
+  .nav__mobileVersion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: $mobile_baclground_color;
+    list-style: none;
+    opacity: 0;  //東西通通透明惹，但他還是在，只是變成透明人看不到 
+    visibility: hidden;  //東西你點不到~怎麼按都按不到
+    transform: translateX(100%); //我把nav__mobileVersion移到最右邊，移到出去視窗外面~
+    transition: transform 0.5s ease-in-out; //這是我要移回來的動畫
+    &.active{
+      opacity: 1;//東西不透明通通看光光
+      visibility: visible;//東西可以點囉~
+      transform: translateX(0%);//我把nav__mobileVersion移到回來囉~
+    }
+    li{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      a{
+        @include font-size(1.5rem);
+        margin: .5rem 0 .5rem 0;
+        padding: .5rem 0 .5rem 0 ;
+        display: inline-block;
+        width: 80%;
+        text-align: center;
+        text-decoration: none;
+        color: $title_color;
+        border-bottom: 1px solid $title_color;
+        padding-bottom: 4px; // 這樣就是「字跟底線的距離」
+        &:hover{
+          background-color: $title_color;
+          color: $mobile_baclground_color;
+        }
+      }
+    }
+
+  }
+
+  .nav__webVersion{
+    display: none;
+  }
+
+
+}
+
+@include lg{
+  nav{
+    #hamburger{
+      display: none;
+    }
+    .nav__webVersion{
+      display: flex;
+      justify-content: space-around;
+      @include font-size(1rem);
+      list-style: none;
+      width: 30%;
+      text-transform: uppercase;
+      .active{
+        color: $title_color;
+      }
+      a{
+        text-decoration: none;
+        color: $text_color;
+        &:hover{
+          color: $title_color;
+          transition: .5s;
+        }
+      }
+    }
+  }
+  
+
+
+}
+

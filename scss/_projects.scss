@@ -1,0 +1,118 @@
+// projects
+
+.projects{
+  width: 50%;
+  color: $text_color;
+  
+  h2{
+    text-align: center;
+  }
+  .projects__card--row{
+    margin-bottom: 6rem;
+    .projects__card--title{
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      p{
+        width: 80%;
+      }
+    }
+    .projects__card--col{
+      margin-top: 3rem;
+      .projects__card{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: $silverChalice;
+        justify-content: space-between;
+        align-items: stretch;
+        color: $background_color;
+        border-radius: .5rem;
+        margin-bottom: 3rem;
+        &::before{
+          content: '';
+          position: absolute;
+          width: 1rem;
+          height: 3.5rem;
+          background-color: $title_color;
+          top: 2rem;
+          left: 0;
+        }
+        .projects__card--header{
+          line-height: 2rem;
+          padding: 2rem;
+          width: 60%;
+          .project__links{
+            a{
+              color: $link_color;
+                &:hover{
+                  color: #ff9f1c;
+                  transition: .5s;
+              }
+            }
+          }
+          h4{
+            color: $title_color;
+            @include font-size(1.5rem);
+          }
+          h5{
+            @include font-size(1.1rem);
+            font-weight: bold;
+          }
+        }
+        .projects__card--body{
+          width: 40%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 1rem;
+          // 為了圖片 hover 效果加 transition 容器控制
+          overflow: hidden;
+          img{
+            width: 100%;
+            max-height: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: .5rem;
+            transition: transform 0.6s ease-in-out; // 平滑動畫效果
+            &:hover{
+              transform: scale(1.05); // 放大 5%
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .projects {
+    .projects__card--row {
+      .projects__card--col {
+        .projects__card {
+          flex-direction: column;
+
+          .projects__card--header,
+          .projects__card--body {
+            width: 100%;
+          }
+
+          .projects__card--body {
+            justify-content: center;
+            margin-top: 1rem;
+
+            img {
+              max-width: 90%;
+              margin: 0 auto;
+              display: block;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}

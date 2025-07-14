@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font-awesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' crossorigin='anonymous'/>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <h1>
+      <a href="#">Miya Hu<span class="nav_tittle--highlighted">/port-folio</span></a>
+    </h1>
+    <div class="overlay"></div>
+    <a href="#" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+    <ul class="nav__webVersion">
+      <li><a href="index.html">about me</a></li>
+      <li><a href="resume.html">resume</a></li>
+      <li><a href="#" class="active">projects</a></li>
+    </ul>
+    <ul class="nav__mobileVersion">
+      <li><a href="index.html">about me</a></li>
+      <li><a href="resume.html">resume</a></li>
+      <li><a href="#" class="active">projects</a></li>
+    </ul>
+  </nav>
+  <section class="projects">
+    <h2>projects</h2>
+    <!-- Experience -->
+     <div class="projects__card--row">
+       <div class="projects__card--title">
+         <p>以下是我近期參與或獨立完成的實際專案，從網頁設計、前端切版，到與團隊協作，都有完整的實務經驗。</p>
+       </div>
+       <div class="projects__card--col">
+         <div class="projects__card">
+           <div class="projects__card--header">
+             <h4>第一產物保險股份有限公司 — 無障礙專區</h4>
+             <h5>前端開發與視覺設計</h5>
+             <p>這是針對保險業公平待客與金融友善推廣所建置的無障礙網站，目標為提升視覺親和力與導覽友善度，並符合無障礙設計規範。</p>
+             <p>我負責全站靜態頁製作，包含頁面設計、HTML / CSS 撰寫與 RWD 響應式切版。</p>
+             <p>子頁包含「客戶回饋」、「商品專區」、「據點查詢」等功能頁面。</p>
+             <p class="project__links">
+               🔗 
+               <a href="https://friendly.firstins.com.tw/firstins/customerFair.html" target="_blank">公平待客專區</a> ｜ 
+               <a href="https://friendly.firstins.com.tw/firstins/sitemap.html" target="_blank">金融友善導覽頁</a>
+             </p>
+           </div>
+           <div class="projects__card--body">
+             <img src="./img/firstins.png" alt="第一產物保險專案圖" class="zoomable">
+           </div>
+         </div>
+         <div class="projects__card">
+          <div class="projects__card--header">
+            <h4>財團法人台灣非破壞檢測協會</h4>
+            <h5>前端切版設計師（視覺＋網頁開發）</h5>
+            <p>這是一個針對台灣非破壞檢測協會的形象官網建置專案，主要目標是提升整體網站的資訊架構與可讀性，並優化在行動裝置上的瀏覽體驗。</p>
+            <p>我負責整體視覺風格規劃、版面設計，以及 HTML / CSS 靜態頁開發。設計上著重於乾淨簡潔的閱讀性，並考量協會專業形象進行色彩配置與字體選擇。</p>
+            <p>技術上配合 RWD 響應式設計，使用 Flexbox 與 media queries 調整各裝置的排版呈現。與專案後端協作整合前後端畫面，Vue 部分與資料串接由他人負責。</p>
+            <p class="project__links">
+              🔗 
+              <a href="https://www.sntct.org.tw/sntct-official/" target="_blank">財團法人台灣非破壞檢測協會</a>
+            </p>
+          </div>
+          <div class="projects__card--body">
+           <img src="./img/sntct.png" alt="非破壞專案圖" class="zoomable">
+          </div>
+        </div>
+       </div>
+     </div>
+  </section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+  <script src="js/all.js"></script>
+</body>
+</html>
